@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@400;500;600;700;800;900&display=swap');
-/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap'); */
 
 :root {
     --primary: rgb(189, 93, 56);
@@ -8,23 +7,29 @@
 body {
     font-family: 'Saira Extra Condensed', sans-serif;
 }
+a {
+    outline: none;
+}
+img {
+    user-select: none;
+}
 
-.title-color {
+h1, h2, h3 {
     color: #343a40;
 }
 
 .text-color {
     color: #6C757D;
 }
-
 .active-color {
     color: rgb(189, 93, 56);
+    font-family: var(--bs-body-font-family);
+    line-height: 1.5;
 }
 
 .navbar {
     background-color: var(--primary) !important;
 }
-
 .fixed-top {
     position: fixed;
     left: 0;
@@ -32,19 +37,14 @@ body {
     width: 17rem;
     height: 100vh;
 }
-
 .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 0.549);
     font-family: var(--bs-body-font-family);
-    font-weight: 800;
     letter-spacing: 1.5px;
     transition: all .15s ease-in-out;
 }
-
 .navbar-brand img {
     border: .5rem solid #CA7D60;
 }
-
 .navbar-brand span {
     font-size: 1.25rem;
     font-family: var(--bs-body-font-family);
@@ -63,11 +63,9 @@ section {
     font-weight: 700;
     line-height: 1.2;
 }
-
 .heading {
     font-size: 1.5rem;
 }
-
 .text {
     font-family: var(--bs-body-font-family);
     font-weight: 400;
@@ -76,15 +74,16 @@ section {
 h1.title {
     font-size: calc(1.725rem + 5vw);
 }
-
 h2.title {
     font-size: calc(1.475rem + 2.7vw);
+}
+h3.title {
+    font-size: calc(1.325rem + 0.9vw);
 }
 
 #about .text {
     font-size: 1.2rem;
 }
-
 #about .link {
     width: 3.5rem;
     height: 3.5rem;
@@ -94,17 +93,25 @@ h2.title {
     background-color: #495057;
     text-decoration: none;
     font-size: 1.5rem;
+    transition: all .15s ease-in-out;
 }
-
 #about .link:hover {
     background-color: var(--primary);
 }
-
-#experience .active-color {
-    font-family: var(--bs-body-font-family);
-    line-height: 1.5;
+#about .active-color {
+    font-family: inherit;
 }
 
+#skills .list-inline-item {
+    font-size: 3rem;
+}
+#skills .list-unstyled,
+#awards .list-unstyled {
+    font-family: var(--bs-body-font-family);
+}
+#awards .fas {
+    color: #FFC107;
+}
 
 @media (max-width: 992px) {
     .fixed-top {
@@ -113,5 +120,6 @@ h2.title {
     }
     section {
         width: 100%;
+        padding: 5rem 1rem;
     }
 }
